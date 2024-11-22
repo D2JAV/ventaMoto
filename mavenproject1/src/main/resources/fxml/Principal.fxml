@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.Principal">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="750.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox minHeight="107.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/moto.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="lblNombrePorgrama" text="\%nombrePrograma" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#minimizar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/menos.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#cerrar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/cerrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label fx:id="lblNombreEmpresa" text="\%nombreEmpresa">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font></Label>
+                              <Label fx:id="lblDirecionEmpresa" text="\%direccionEmpresa" />
+                              <Label fx:id="lblRucEmpresa" text="\%Ruc" />
+                           </children>
+                        </VBox>
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Separator orientation="VERTICAL" />
+                        <VBox alignment="CENTER" prefWidth="150.0">
+                           <children>
+                              <Label fx:id="lblFecha" text="\%fecha">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator />
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" minWidth="150.0" prefWidth="150.0">
+                     <content>
+                        <Accordion prefWidth="150.0">
+                          <panes>
+                            <TitledPane expanded="false" text="Inventario">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#productos">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT" spacing="3.0">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagenes/producto.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL">
+                                                         <effect>
+                                                            <Lighting>
+                                                               <bumpInput>
+                                                                  <DropShadow />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
+                                                      </Separator>
+                                                      <Label text="Productos" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#compraList">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT" spacing="3.0">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagenes/carrito-de-compras.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL">
+                                                         <effect>
+                                                            <Lighting>
+                                                               <bumpInput>
+                                                                  <DropShadow />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect></Separator>
+                                                      <Label text="Compras" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT" spacing="3.0">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagenes/membrana.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL">
+                                                         <effect>
+                                                            <Lighting>
+                                                               <bumpInput>
+                                                                  <DropShadow />
+                                                               </bumpInput>
+                                                               <light>
+                                                                  <Light.Distant />
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
+                                                      </Separator>
+                                                      <Label text="Registro" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane expanded="false" text="Clientes">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clienteLista">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagenes/membrana.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Registro" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane expanded="false" text="Proveedores">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#proveedorLista">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagenes/membrana.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Registro" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane expanded="false" text="Usuarios">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#usuarioLista">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagenes/membrana.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Registro" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane expanded="false" text="Ventas">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../java/app/recursos/bolsa-de-valores.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Nuevo" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../java/app/recursos/evaluacion.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Registro" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane expanded="false" text="Administracion">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#configuracion">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Configuracion" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false">
+                                             <graphic>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <Separator orientation="VERTICAL" />
+                                                      <Label text="Exportar EXCEL" />
+                                                   </children>
+                                                </HBox>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </content>
+                  </ScrollPane>
+                  <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label fx:id="lblCopyright" text="\%copyright" />
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Label fx:id="lblVersion" text="\%vssersion" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

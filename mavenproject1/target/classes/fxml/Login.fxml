@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.Login">
+    <children>
+      <HBox alignment="CENTER" prefHeight="225.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="225.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/images.png" />
+               </image>
+            </ImageView>
+              <VBox prefHeight="300.0" prefWidth="300.0" spacing="5.0">
+                  <children>
+                  <HBox>
+                     <children>
+                        <Label text="Usuario" />
+                        <Label fx:id="lblErrorUsuario" style="-fx-text-fill: red;" text="\%lblError" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="txtUsuario" />
+                  <HBox>
+                     <children>
+                        <Label text="Contraseña" />
+                        <Label fx:id="lblErrorContrasenia" style="-fx-text-fill: red;" text="\%lblError" />
+                     </children>
+                  </HBox>
+                  <PasswordField fx:id="txtContrasenia" />
+                      <Pane VBox.vgrow="ALWAYS" />
+                      <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" VBox.vgrow="ALWAYS" />
+                  </children>
+                  <padding>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+              </VBox>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

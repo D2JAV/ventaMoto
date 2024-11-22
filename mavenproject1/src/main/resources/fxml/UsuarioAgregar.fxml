@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#keryboardPressed" onMouseDragged="#mover" onMousePressed="#presionar" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.UsuarioAgregar">
+    <children>
+        <VBox prefHeight="300.0" prefWidth="300.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label text="Crear nuevo usuario" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#cerrar">
+                            <graphic>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagenes/cerrar.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                <Separator VBox.vgrow="ALWAYS" />
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                  <ColumnConstraints halignment="RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                  <ColumnConstraints minWidth="10.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Nombre" GridPane.rowIndex="1" />
+                  <Label text="Apellido" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtApellido" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtNombre" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Cargo" GridPane.rowIndex="3" />
+                  <Label fx:id="lblErrorNombre" text="*error" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="lblErroApellido" text="*error" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label text="Email" GridPane.rowIndex="4" />
+                  <Label text="Telefono" GridPane.rowIndex="5" />
+                  <Label text="Direccion" GridPane.rowIndex="6" />
+                  <Label text="Contraseña" GridPane.rowIndex="7" />
+                  <TextField fx:id="txtEmail" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtTelefono" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <TextField fx:id="txtDireccion" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Label fx:id="lblErroEmail" text="*error" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label fx:id="lblErrorTelefono" text="*error" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label fx:id="lblErrorDireccion" text="*error" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Label fx:id="lblErrorContrasenia" text="*error" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <PasswordField fx:id="txtContrasenia" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button fx:id="btnCargo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cambiarCargo" text="Vendedor" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label text="Usuario" />
+                  <TextField fx:id="txtUsuario" GridPane.columnIndex="2" />
+                  <Label fx:id="lblErrorUsuario" text="*error" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+                <Pane VBox.vgrow="ALWAYS" />
+                <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" VBox.vgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

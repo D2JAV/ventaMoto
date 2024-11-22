@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#keryboardPressed" onMouseDragged="#mover" onMousePressed="#presionar" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ProductoSeleccionar">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="900.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label text="Seleccionar Producto" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#cerrar">
+                            <graphic>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagenes/cerrar.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                <Separator VBox.vgrow="ALWAYS" />
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <TextField fx:id="txtBuscador" maxWidth="300.0" onAction="#buscar" promptText="Buscar..." HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#buscar">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/buscar16.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#refrescar">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/girar16.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tabla" focusTraversable="false" VBox.vgrow="ALWAYS" />
+                <Button fx:id="btnSeleccionar" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#aceptar" text="Seleccionar" VBox.vgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
